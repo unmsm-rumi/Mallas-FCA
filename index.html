@@ -1,29 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mallas Curriculares - Facultad de Ciencias Administrativas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Interactiva – Facultad de Ciencias Administrativas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    .malla { display: none; margin-top: 20px; }
-    .visible { display: block; }
-    button { margin: 5px; padding: 10px 20px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #fefefe;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #8B0000; /* Rojo oscuro institucional */
+      color: #fff;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar button {
+      display: block;
+      width: 100%;
+      padding: 10px 15px;
+      margin: 8px 0;
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.2s;
+    }
+
+    .sidebar button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+      animation: fade 0.3s ease-in-out;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      color: #8B0000;
+      margin-bottom: 10px;
+    }
+
+    .descripcion {
+      color: #333;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
   </style>
 </head>
 <body>
+  <div class="sidebar">
+    <h2>Menú</h2>
+    <button onclick="mostrarSeccion('inicio')">🏠 Inicio</button>
+    <button onclick="mostrarSeccion('administracion')">📚 Administración</button>
+    <button onclick="mostrarSeccion('negocios')">📊 Negocios Internacionales</button>
+    <button onclick="mostrarSeccion('turismo')">🏨 Turismo</button>
+    <button onclick="mostrarSeccion('marketing')">🤳🏼 Marketing</button>
+    <button onclick="mostrarSeccion('gastronomia')">👨🏼‍🍳 Gastronomía</button
+    <button onclick="mostrarSeccion('maritima')">🌊 Marítima y Portuaria</button>
+  </div>
 
-  <h1>Selecciona una carrera</h1>
-  <button onclick="mostrarMalla('administración')">Administración</button>
-  <button onclick="mostrarMalla('negocios')">Admin. de Negocios Internacionales</button>
-  <button onclick="mostrarMalla('turismo')">Admin. de Turismo</button>
-  <button onclick="mostrarMalla('marketing')">Marketing</button>
-  <button onclick="mostrarMalla('maritima')">Admin. Marítima y Portuaria</button>
-  <button onclick="mostrarMalla('gastronomia')">Gastronomía</button>
+  <div class="content">
+    <!-- INICIO -->
+    <div id="inicio" class="section active">
+      <h1>Bienvenido</h1>
+      <p class="descripcion">Selecciona una carrera del menú para ver su malla curricular y especialidades.</p>
+    </div>
 
-  <!-- Negocios Internacionales-->
-  <div id="malla-negocios" class="malla">
-   <head>
+    <!-- NEGOCIOS INTERNACIONALES -->
+    <div id="negocios" class="section">
+      <h1>Negocios Internacionales</h1>
+        <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin. de Negocios Internacionales ✈️</title>
@@ -322,11 +403,13 @@
   </script>
 </body>
 </html>
-  </div>
+      <p class="descripcion">Aquí va la malla, especialidades y otros detalles de la carrera de Negocios Internacionales.</p>
+    </div>
 
-  <!-- Administración -->
-  <div id="malla-administración" class="malla">
-   <head>
+    <!-- ADMINISTRACIÓN -->
+    <div id="administracion" class="section">
+      <h1>Administración</h1>
+         <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Administración</title>
@@ -676,6 +759,25 @@
       document.getElementById('malla-' + carrera).classList.add('visible');
     }
   </script>
+</body>
+</html>
+      <p class="descripcion">Aquí va la malla, especialidades y otros detalles de la carrera de Administración.</p>
+    </div>
 
+    <!-- GESTIÓN HOTELERA -->
+    <div id="hotelera" class="section">
+      <h1>Gestión Hotelera</h1>
+      <!-- 👇 Pega aquí el código HTML de la malla curricular de Gestión Hotelera -->
+      <p class="descripcion">Aquí va la malla, especialidades y otros detalles de la carrera de Gestión Hotelera.</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll('.section');
+      secciones.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
