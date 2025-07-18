@@ -8,21 +8,21 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fdf2f2;
+      background-color: #eaf6ff; /* azul claro de fondo */
       margin: 0;
       padding: 20px;
       cursor: url('https://cdn-icons-png.flaticon.com/512/34/34627.png'), auto;
     }
     h1 {
       text-align: center;
-      color: #b30000;
+      color: #004080; /* azul oscuro */
       margin-bottom: 10px;
     }
     .selector-electivas {
       margin: 20px auto;
       padding: 15px;
-      background-color: #ffe5e5;
-      border: 1px solid #ffcccc;
+      background-color: #d9ecff; /* fondo azul tenue */
+      border: 1px solid #b3d7ff; /* borde celeste */
       border-radius: 8px;
       max-width: 700px;
     }
@@ -34,14 +34,14 @@
     }
     .ciclo {
       min-width: 250px;
-      background-color: #fff5f5;
+      background-color: #f0f8ff; /* blanco azulado */
       border-radius: 12px;
       padding: 15px;
-      border: 1px solid #f4cccc;
+      border: 1px solid #c2dfff; /* borde celeste más fuerte */
       flex-shrink: 0;
     }
     .ciclo h2 {
-      color: #b30000;
+      color: #004080; /* azul oscuro */
       text-align: center;
       font-size: 18px;
       margin-bottom: 15px;
@@ -49,9 +49,9 @@
     .curso {
       position: relative;
       padding: 10px;
-      background-color: #e6e6e6;
+      background-color: #e6f2ff; /* azul muy claro */
       border-radius: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #99c2ff; /* celeste suave */
       cursor: default;
       transition: all 0.3s ease;
       text-align: center;
@@ -59,23 +59,23 @@
       opacity: 0.6;
     }
     .curso.activo {
-      background-color: #ffdddd;
-      border-color: #b30000;
-      color: #b30000;
+      background-color: #cce6ff; /* azul claro */
+      border-color: #004080;
+      color: #004080;
       font-weight: bold;
       cursor: pointer;
       opacity: 1;
     }
     .curso.tildado {
       text-decoration: line-through;
-      background-color: #d4d4d4;
+      background-color: #d0dce8; /* gris azulado */
       color: #777;
       opacity: 1;
       cursor: pointer;
     }
     .curso.electiva {
-      border: 2px dashed #cc0000;
-      background-color: #fef0f0;
+      border: 2px dashed #0059b3; /* azul medio fuerte */
+      background-color: #f0f8ff;
     }
     .tooltip {
       position: absolute;
@@ -83,7 +83,7 @@
       left: 50%;
       transform: translateX(-50%);
       background-color: #fff;
-      border: 1px solid #ccc;
+      border: 1px solid #b3d7ff;
       border-radius: 6px;
       padding: 8px;
       font-size: 13px;
@@ -106,11 +106,12 @@
 <body>
   <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 10px;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/UNMSM_coatofarms_seal.svg/1200px-UNMSM_coatofarms_seal.svg.png" alt="UNMSM Logo" style="height: 80px;">
-    <h1 style="margin: 0; font-size: 24px; color: #b30000;">Malla Curricular - Admin. de Negocios Internacionales</h1>
+    <h1 style="margin: 0; font-size: 24px; color: #004080;">Malla Curricular - Administración</h1>
     <a href="https://www.instagram.com/rumi.unmsm/" target="_blank">
       <img src="https://i.imgur.com/afM1pkm.png" alt="RUMI Logo" style="height: 80px;">
     </a>
   </div>
+
 
   <div class="selector-electivas" id="electivas">
     <strong>Elige tus 2 áreas electivas:</strong><br>
