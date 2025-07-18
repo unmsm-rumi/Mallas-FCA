@@ -129,6 +129,7 @@
   <script>
     const cursos = [
   // 1er ciclo
+  // 1er ciclo
   { nombre: "Lenguaje", creditos: 4, ciclo: 1 },
   { nombre: "Métodos de estudio universitario", creditos: 3, ciclo: 1 },
   { nombre: "Historia del Perú", creditos: 3, ciclo: 1 },
@@ -147,7 +148,7 @@
   // 3er ciclo
   { nombre: "Estadística Descriptiva", creditos: 4, ciclo: 3 },
   { nombre: "Microeconomía", creditos: 3, ciclo: 3 },
-  { nombre: "Visión para el Desarrollo", creditos: 3, ciclo: 3 }, prereq: ["Investigación Académica"] },
+  { nombre: "Visión para el Desarrollo", creditos: 3, ciclo: 3, prereq: ["Investigación Académica"] },
   { nombre: "Fundamentos de la Administración", creditos: 4, ciclo: 3 },
   { nombre: "TICs para la Gestión", creditos: 3, ciclo: 3 },
   { nombre: "Fundamentos de la Contabilidad", creditos: 3, ciclo: 3 },
@@ -183,24 +184,24 @@
   { nombre: " Finanzas Corporativas II", creditos: 3, ciclo: 6, prereq: ["Finanzas Corporativas I"], area: "finanzas"  },
   { nombre: "Formulación y evaluación de proyectos de Inversión", creditos: 3, ciclo: 6, prereq: ["Herramientas para el Desarrollo de Proyectos"], area: "proyectos"  },
   { nombre: "Marketing Digital", creditos: 3, ciclo: 6, prereq: ["Fundamentos de Marketing"], area: "marketing"  },
-  { nombre: "Comportamiento del consumidor", creditos: 3, ciclo: 6, área: "marketing"   },
-  { nombre: "Planeación de la demanda, pronósticos y simuladores", creditos: 3, ciclo: 6, área: "logística"  },
-  { nombre: "Investigación, desarrollo e innovación", creditos: 3, ciclo: 6, área: "logística"   },
+  { nombre: "Comportamiento del consumidor", creditos: 3, ciclo: 6, area: "marketing"   },
+  { nombre: "Planeación de la demanda, pronósticos y simuladores", creditos: 3, ciclo: 6, area: "logística"  },
+  { nombre: "Investigación, desarrollo e innovación", creditos: 3, ciclo: 6, area: "logística"   },
 
   // 7mo ciclo
   { nombre: "Negocios Internacionales", creditos: 4, ciclo: 7 },
   { nombre: " Técnicas de Investigación Cuantitativa", creditos: 3, ciclo: 7, prereq: ["Técnicas de Investigación Cualitativa"] },
   { nombre: "Prospectiva Empresarial", creditos: 3, ciclo: 6, prereq: ["Reestructuración, Mejoramiento y Cambio Empresarial"] },
   { nombre: "Capacitación y Desarrollo del talento", creditos: 3, ciclo: 7, prereq: ["Reclutamiento y Selección del talento "], area: "talento"  },
-  { nombre: "Gestión del clima, cultura y comunicación organizacional", creditos: 3, ciclo: 7, área: "talento"  },
+  { nombre: "Gestión del clima, cultura y comunicación organizacional", creditos: 3, ciclo: 7, area: "talento"  },
   { nombre: "Mercado de Capitales", creditos: 3, ciclo: 7, prereq: ["Finanzas Corporativas II"], area: "finanzas"  },
-  { nombre: "Derivados financieros", creditos: 3, ciclo: 7, área: "finanzas"  },
+  { nombre: "Derivados financieros", creditos: 3, ciclo: 7, area: "finanzas"  },
   { nombre: "Formulación y evaluación de proyectos sociales I", creditos: 3, ciclo: 7, prereq: ["Formulación y evaluación de proyectos de Inversión"], area: "proyectos"  },
-  { nombre: "Gestión de Riesgos de los Proyectos", creditos: 3, ciclo: 7, área: "proyectos"  },
+  { nombre: "Gestión de Riesgos de los Proyectos", creditos: 3, ciclo: 7, area: "proyectos"  },
   { nombre: "Marketing de servicios", creditos: 3, ciclo: 7, prereq: ["Marketing Digital"], area: "marketing"  },
-  { nombre: "Programación Neurolingüística", creditos: 3, ciclo: 7, área: "marketing"  },
+  { nombre: "Programación Neurolingüística", creditos: 3, ciclo: 7, area: "marketing"  },
   { nombre: "Operaciones I", creditos: 3, ciclo: 7, area: "logística"  },
-  { nombre: "Aprovisionamiento y negociación", creditos: 3, ciclo: 7, área: "logística"  },
+  { nombre: "Aprovisionamiento y negociación", creditos: 3, ciclo: 7, area: "logística"  },
 
   // 8vo ciclo
   { nombre: "Integración Económica", creditos: 3, ciclo: 8, prereq: ["Negocios Internacionales"] },
@@ -208,15 +209,15 @@
   { nombre: "Planeamiento Estratégico", creditos: 3, ciclo: 8, prereq: ["Prospectiva Empresarial"] },
   { nombre: "Gestión Pública", creditos: 3, ciclo: 8 },
   { nombre: "Evaluación del desempeño laboral", creditos: 3, ciclo: 8, prereq: ["Capacitación y Desarrollo del talento "], area: "talento"  },
-  { nombre: "Inteligencia Emocional y Social", creditos: 3, ciclo: 8, área: "talento"  },
+  { nombre: "Inteligencia Emocional y Social", creditos: 3, ciclo: 8, area: "talento"  },
   { nombre: "Finanzas Internacionales", creditos: 3, ciclo: 8, prereq: ["Mercado de Capitales"], area: "finanzas"  },
-  { nombre: "Econometría Financiera", creditos: 3, ciclo: 8, área: "finanzas"  },
+  { nombre: "Econometría Financiera", creditos: 3, ciclo: 8, area: "finanzas"  },
   { nombre: " Formulación y evaluación de proyectos sociales II", creditos: 3, ciclo: 8, prereq: ["Formulación y evaluación de proyectos sociales I"], area: "proyectos"  },
-  { nombre: "Gestión de proyectos públicos y privados", creditos: 3, ciclo: 8, área: "proyectos"  },
+  { nombre: "Gestión de proyectos públicos y privados", creditos: 3, ciclo: 8, area: "proyectos"  },
   { nombre: "Marketing internacional", creditos: 3, ciclo: 8, prereq: ["Marketing de servicios"], area: "marketing"  },
-  { nombre: "Publicidad y Branding", creditos: 3, ciclo: 8, área: "marketing"  },
-  { nombre: " Operaciones II", creditos: 3, ciclo: 8, área: "logística"  },
-  { nombre: "Gestión de almacenes e inventarios", creditos: 3, ciclo: 8, área: "logística"  },
+  { nombre: "Publicidad y Branding", creditos: 3, ciclo: 8, area: "marketing"  },
+  { nombre: " Operaciones II", creditos: 3, ciclo: 8, area: "logística"  },
+  { nombre: "Gestión de almacenes e inventarios", creditos: 3, ciclo: 8, area: "logística"  },
 
   // 9no ciclo
   { nombre: "Cadena de Valor", creditos: 3, ciclo: 9 },
@@ -224,106 +225,107 @@
   { nombre: "Dirección Estratégica", creditos: 3, ciclo: 9, prereq: ["Planeamiento Estratégico"] },
   { nombre: "Desarrollo y Lanzamiento de Nuevos Productos", creditos: 3, ciclo: 9 },
   { nombre: "Valoración de puestos y gestión de las compensaciones", creditos: 3, ciclo: 9, prereq: ["Evaluación del desempeño laboral"], area: "talento"  },
-  { nombre: "Gestión del Talento Humano en el sector público", creditos: 3, ciclo: 9, área: "talento"  },
+  { nombre: "Gestión del Talento Humano en el sector público", creditos: 3, ciclo: 9, area: "talento"  },
   { nombre: "Gestión de Riesgos Financieros", creditos: 3, ciclo: 9, prereq: ["Finanzas Internacionales"], area: "finanzas"  },
-  { nombre: "Finanzas Públicas", creditos: 3, ciclo: 9, área: "finanzas"  },
+  { nombre: "Finanzas Públicas", creditos: 3, ciclo: 9, area: "finanzas"  },
   { nombre: "Gerencia de Proyectos", creditos: 3, ciclo: 9, prereq: ["Formulación y evaluación de proyectos sociales II"], area: "proyectos"  },
-  { nombre: "Gerencia de Ventas", creditos: 3, ciclo: 9, área: "marketing"  },
-  { nombre: "Negociación Comercial", creditos: 3, ciclo: 9, área: "marketing"  },
-  { nombre: "Logística en el sector público", creditos: 3, ciclo: 9, área: "logística"  },
-  { nombre: "Distribución y transporte", creditos: 3, ciclo: 9, área: "logística"  },
+  { nombre: "Gerencia de Ventas", creditos: 3, ciclo: 9, area: "marketing"  },
+  { nombre: "Negociación Comercial", creditos: 3, ciclo: 9, area: "marketing"  },
+  { nombre: "Logística en el sector público", creditos: 3, ciclo: 9, area: "logística"  },
+  { nombre: "Distribución y transporte", creditos: 3, ciclo: 9, area: "logística"  },
 
   // 10mo ciclo
   { nombre: " Desarrollo de Investigación II", creditos: 3, ciclo: 10 },
   { nombre: "Gerencia General y Alta Dirección", creditos: 3, ciclo: 10, prereq: ["Dirección Estratégica"] },
   { nombre: "Gestión de Pymes", creditos: 3, ciclo: 10 },
   { nombre: "Gerencia Estratégica del Talento Humano", creditos: 3, ciclo: 10, prereq: ["Valoración de puestos y gestión de las compensaciones"], area: "talento"  },
-  { nombre: "Auditoría en la Gestión del Talento Humano", creditos: 3, ciclo: 10, área: "talento"  },
+  { nombre: "Auditoría en la Gestión del Talento Humano", creditos: 3, ciclo: 10, area: "talento"  },
   { nombre: "Dirección financiera", creditos: 3, ciclo: 10, prereq: ["Gestión de Riesgos Financieros"], area: "finanzas"  },
   { nombre: "Taller de Proyectos", creditos: 3, ciclo: 10, prereq: ["Gerencia de Proyectos"], area: "proyectos"  },
-  { nombre: "Gerencia de Marketing", creditos: 3, ciclo: 10, área: "marketing"  },
-  { nombre: "Neuromarketing", creditos: 3, ciclo: 10, área: "marketing"  },
-  { nombre: "Gerencia Logística", creditos: 3, ciclo: 10, área: "logística"  },
-  { nombre: "Logística Internacional", creditos: 3, ciclo: 10, área: "logística"  },
+  { nombre: "Gerencia de Marketing", creditos: 3, ciclo: 10, area: "marketing"  },
+  { nombre: "Neuromarketing", creditos: 3, ciclo: 10, area: "marketing"  },
+  { nombre: "Gerencia Logística", creditos: 3, ciclo: 10, area: "logística"  },
+  { nombre: "Logística Internacional", creditos: 3, ciclo: 10, area: "logística"  },
 ]; // ya definidos arriba
     const contenedor = document.getElementById("contenedor-cursos");
+  const contenedor = document.getElementById("contenedor-cursos");
 
-    function guardarElectivas() {
-      const seleccionadas = Array.from(document.querySelectorAll('.opt:checked')).map(e => e.value);
-      localStorage.setItem('electivasSeleccionadas', JSON.stringify(seleccionadas));
-    }
+  function guardarElectivas() {
+    const seleccionadas = Array.from(document.querySelectorAll('.opt:checked')).map(e => e.value);
+    localStorage.setItem('electivasSeleccionadas', JSON.stringify(seleccionadas));
+  }
 
-    function cargarElectivas() {
-      const guardadas = JSON.parse(localStorage.getItem('electivasSeleccionadas') || '[]');
-      document.querySelectorAll('.opt').forEach(opt => {
-        opt.checked = guardadas.includes(opt.value);
-      });
-    }
-
-    function renderCursos() {
-      contenedor.innerHTML = "";
-      const electivas = Array.from(document.querySelectorAll('.opt:checked')).map(e => e.value);
-      const agrupados = cursos.reduce((acc, curso) => {
-        if (curso.area && !electivas.includes(curso.area)) return acc;
-        if (!acc[curso.ciclo]) acc[curso.ciclo] = [];
-        acc[curso.ciclo].push(curso);
-        return acc;
-      }, {});
-
-      Object.keys(agrupados).sort((a, b) => a - b).forEach(ciclo => {
-        const divCiclo = document.createElement("div");
-        divCiclo.className = "ciclo";
-        const titulo = document.createElement("h2");
-        titulo.textContent = `${ciclo}° Ciclo`;
-        divCiclo.appendChild(titulo);
-
-        agrupados[ciclo].forEach(curso => {
-          const estado = localStorage.getItem(curso.nombre) === "true";
-          const prereqCumplidos = !curso.prereq || curso.prereq.every(p => localStorage.getItem(p) === "true");
-
-          const div = document.createElement("div");
-          div.className = "curso";
-          if (estado) div.classList.add("tildado");
-          else if (prereqCumplidos) div.classList.add("activo");
-          else div.classList.add("bloqueado");
-          if (curso.area) div.classList.add("electiva");
-
-          div.textContent = curso.nombre;
-
-          const tooltip = document.createElement("div");
-          tooltip.className = "tooltip";
-          tooltip.textContent = `Créditos: ${curso.creditos}\nPrerrequisitos: ${curso.prereq ? curso.prereq.join(', ') : 'NR'}`;
-          div.appendChild(tooltip);
-
-          if (div.classList.contains("activo") || div.classList.contains("tildado")) {
-            div.addEventListener("click", () => {
-              const nuevo = !(localStorage.getItem(curso.nombre) === "true");
-              localStorage.setItem(curso.nombre, nuevo);
-              renderCursos();
-            });
-          }
-
-          divCiclo.appendChild(div);
-        });
-
-        contenedor.appendChild(divCiclo);
-      });
-    }
-
+  function cargarElectivas() {
+    const guardadas = JSON.parse(localStorage.getItem('electivasSeleccionadas') || '[]');
     document.querySelectorAll('.opt').forEach(opt => {
-      opt.addEventListener('change', () => {
-        const seleccionadas = Array.from(document.querySelectorAll('.opt:checked'));
-        if (seleccionadas.length > 2) {
-          opt.checked = false;
-          alert('Solo puedes elegir 2 áreas electivas.');
-        }
-        guardarElectivas();
-        renderCursos();
-      });
+      opt.checked = guardadas.includes(opt.value);
     });
+  }
 
-    cargarElectivas();
-    renderCursos();
-  </script>
+  function renderCursos() {
+    contenedor.innerHTML = "";
+    const electivas = Array.from(document.querySelectorAll('.opt:checked')).map(e => e.value);
+    const agrupados = cursos.reduce((acc, curso) => {
+      if (curso.area && !electivas.includes(curso.area)) return acc;
+      if (!acc[curso.ciclo]) acc[curso.ciclo] = [];
+      acc[curso.ciclo].push(curso);
+      return acc;
+    }, {});
+
+    Object.keys(agrupados).sort((a, b) => a - b).forEach(ciclo => {
+      const divCiclo = document.createElement("div");
+      divCiclo.className = "ciclo";
+      const titulo = document.createElement("h2");
+      titulo.textContent = `${ciclo}° Ciclo`;
+      divCiclo.appendChild(titulo);
+
+      agrupados[ciclo].forEach(curso => {
+        const estado = localStorage.getItem(curso.nombre) === "true";
+        const prereqCumplidos = !curso.prereq || curso.prereq.every(p => localStorage.getItem(p) === "true");
+
+        const div = document.createElement("div");
+        div.className = "curso";
+        if (estado) div.classList.add("tildado");
+        else if (prereqCumplidos) div.classList.add("activo");
+        else div.classList.add("bloqueado");
+        if (curso.area) div.classList.add("electiva");
+
+        div.textContent = curso.nombre;
+
+        const tooltip = document.createElement("div");
+        tooltip.className = "tooltip";
+        tooltip.textContent = `Créditos: ${curso.creditos}\nPrerrequisitos: ${curso.prereq ? curso.prereq.join(', ') : 'NR'}`;
+        div.appendChild(tooltip);
+
+        if (div.classList.contains("activo") || div.classList.contains("tildado")) {
+          div.addEventListener("click", () => {
+            const nuevo = !(localStorage.getItem(curso.nombre) === "true");
+            localStorage.setItem(curso.nombre, nuevo);
+            renderCursos();
+          });
+        }
+
+        divCiclo.appendChild(div);
+      });
+
+      contenedor.appendChild(divCiclo);
+    });
+  }
+
+  document.querySelectorAll('.opt').forEach(opt => {
+    opt.addEventListener('change', () => {
+      const seleccionadas = Array.from(document.querySelectorAll('.opt:checked'));
+      if (seleccionadas.length > 2) {
+        opt.checked = false;
+        alert('Solo puedes elegir 2 áreas electivas.');
+      }
+      guardarElectivas();
+      renderCursos();
+    });
+  });
+
+  cargarElectivas();
+  renderCursos();
+</script>
 </body>
 </html>
